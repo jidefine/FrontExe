@@ -7,10 +7,12 @@
 </head>
 <body>
     <h1>레드향 주문하기</h1>
-    <form acton="order.jsp">
+    사용자가 폼을 제출했을 때 데이터를 전송할 URL을 지정
+    <form action="order.jsp">
         <fieldset>
             <legend>상품 선택</legend>
             <p><b>주문할 상품을 선택해주세요.</b></p>
+            
             <ul>
                 <li>
                     <label><input type="checkbox" value="s_3">선물용 3kg</label>
@@ -36,7 +38,7 @@
                 <li><label><input type="radio" name="gift" value="no">선물 포장 안 함</label></li>
             </ul>
         </fieldset>
-        
+
         <fieldset>
             <legend>배송 정보</legend>
             <ul id="shipping">

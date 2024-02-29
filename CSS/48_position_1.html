@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        p{
+            width:500px;
+            height:200px;
+            background-color: #eee;
+            border:1px solid #ccc;
+            line-height: 2;
+        }
+        #static{
+        position: static;
+        border: 3px solid red;
+        }
+        #relative-1{
+        position: relative;
+        border: 3px solid yellow;
+        }
+        #relative-2{
+        position: relative;
+        left: 100px;
+        top: -50px;
+        border: 3px solid blue;
+        }
+        #fixed{
+            width: 300px;
+            height: 300px;
+            background: url('../images/cat.jpg');
+            position: fixed;
+            right: 30px;
+            top: 30px;
+        }
+
+
+    </style>
+</head>
+<!-- [position]
+static   : 기본값, 문서의 흐름에 맞춰 배치
+relative : static과 동일하지만, 위치값을 지정 가능
+absolute : relative를 사용한 상위 요소를 기준으로 위치값을 지정
+fixed    : 브라우저 창을 기준으로 위치 지정 -->
+<body>
+    <p id="static">Duis eget placerat mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam ac tincidunt augue. Sed laoreet tristique velit, id tristique risus elementum vel. Vestibulum vitae ligula sit amet lectus scelerisque fringilla eget vel risus. Nam sed justo eros. Ut at mauris gravida dui semper tristique a in augue. Cras vitae iaculis lacus. Vestibulum semper sit amet massa eget dictum. Maecenas ante libero, elementum eget suscipit eget, egestas nec libero.</p>
+    <p id="relative-1">Duis eget placerat mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam ac tincidunt augue. Sed laoreet tristique velit, id tristique risus elementum vel. Vestibulum vitae ligula sit amet lectus scelerisque fringilla eget vel risus. Nam sed justo eros. Ut at mauris gravida dui semper tristique a in augue. Cras vitae iaculis lacus. Vestibulum semper sit amet massa eget dictum. Maecenas ante libero, elementum eget suscipit eget, egestas nec libero.</p>
+    <p id="relative-2">Duis eget placerat mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam ac tincidunt augue. Sed laoreet tristique velit, id tristique risus elementum vel. Vestibulum vitae ligula sit amet lectus scelerisque fringilla eget vel risus. Nam sed justo eros. Ut at mauris gravida dui semper tristique a in augue. Cras vitae iaculis lacus. Vestibulum semper sit amet massa eget dictum. Maecenas ante libero, elementum eget suscipit eget, egestas nec libero.</p>
+    <p id="fixed"></p>
+    <p>Duis eget placerat mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam ac tincidunt augue. Sed laoreet tristique velit, id tristique risus elementum vel. Vestibulum vitae ligula sit amet lectus scelerisque fringilla eget vel risus. Nam sed justo eros. Ut at mauris gravida dui semper tristique a in augue. Cras vitae iaculis lacus. Vestibulum semper sit amet massa eget dictum. Maecenas ante libero, elementum eget suscipit eget, egestas nec libero.</p>
+    <p>Duis eget placerat mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam ac tincidunt augue. Sed laoreet tristique velit, id tristique risus elementum vel. Vestibulum vitae ligula sit amet lectus scelerisque fringilla eget vel risus. Nam sed justo eros. Ut at mauris gravida dui semper tristique a in augue. Cras vitae iaculis lacus. Vestibulum semper sit amet massa eget dictum. Maecenas ante libero, elementum eget suscipit eget, egestas nec libero.</p>
+    <p>Duis eget placerat mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam ac tincidunt augue. Sed laoreet tristique velit, id tristique risus elementum vel. Vestibulum vitae ligula sit amet lectus scelerisque fringilla eget vel risus. Nam sed justo eros. Ut at mauris gravida dui semper tristique a in augue. Cras vitae iaculis lacus. Vestibulum semper sit amet massa eget dictum. Maecenas ante libero, elementum eget suscipit eget, egestas nec libero.</p>
+    <p>Duis eget placerat mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam ac tincidunt augue. Sed laoreet tristique velit, id tristique risus elementum vel. Vestibulum vitae ligula sit amet lectus scelerisque fringilla eget vel risus. Nam sed justo eros. Ut at mauris gravida dui semper tristique a in augue. Cras vitae iaculis lacus. Vestibulum semper sit amet massa eget dictum. Maecenas ante libero, elementum eget suscipit eget, egestas nec libero.</p>
+</body>
+</html>

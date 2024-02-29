@@ -1,0 +1,15 @@
+
+div{
+    border:1px solid #222;
+}
+#container{
+    width: 600px;
+    border:none
+}
+table, th, td{
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+th, td{
+    border: ;
+}

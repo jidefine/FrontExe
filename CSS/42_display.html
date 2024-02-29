@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;           
+        }
+        nav ul{
+            list-style: none;
+        }
+        nav ul li{
+            /* display: 블록레벨<->인라인레벨 변경 가능 */
+            /*li은 원래 아래로 나열이나, display을 통해 오른쪽으로 나열됨*/
+            /*수평 내비게이션을 만들때 주로 사용함(?)*/
+            display: inline-block;
+            padding: 20px;
+            margin: 0 20px;
+            border: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>menu 1</li>
+            <li>menu 2</li>
+            <li>menu 3</li>
+            <li>menu 4</li>
+        </ul>
+    </nav>
+</body>
+</html>

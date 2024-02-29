@@ -1,15 +1,19 @@
-
+body{
+    background-color: #222;
+}
 div{
     border:1px solid #222;
 }
 #container{
     width: 600px;
-    border:none
+    border:none;
+    margin: 20px auto; /*상하-20px, 좌우-자동으로 결정-가운데 위치*/
+    background-color: #fff;
 }
 table, th, td{
     border: 1px solid #ccc;
     border-collapse: collapse;
 }
 th, td{
-    border: ;
+    padding: 10px 20px;
 }

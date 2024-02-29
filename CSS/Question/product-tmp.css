@@ -1,0 +1,33 @@
+
+#container{
+    width: 600px;
+    border:none;
+    margin: 20px auto; /*상하-20px, 좌우-자동으로 결정-가운데 위치*/
+}
+table, th, td{
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 10px 20px;
+}
+#description{
+    border: 1px;
+    border-style: dotted solid dotted solid;
+    border-radius: 15px 15px 0px 0px;
+    margin: 20px;
+    padding: 10px 20px;
+}
+#receipe{
+    border: 1px;
+    border-style: dotted;
+    margin: 20px;
+    padding: 10px 20px;
+}
+#package{
+    border: 1px;
+    border-style: dotted dotted solid dotted;
+    border-radius:  0px 0px 15px 15px;
+    margin: 20px;
+    padding: 10px 20px 20px 20px;
+}

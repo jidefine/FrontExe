@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            /*캡션을 아래 위치하도록*/
+            caption-side: bottom;
+            /*solid : 실선*/
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td, tr{
+            /*dotted : 점선*/
+            border: 1px dotted black;
+            padding: 10px;
+            text-align: center;
+        }
+        /*따라서 표의 테두리는 실선으로, 안쪽 테두리는 점선이 됨*/
+    </style>
+</head>
+<body>
+    <h2>상품 구성</h2>
+    <table>
+        <!-- 테이블은 행을 기준으로 만듦 -->
+        <caption>선물용과 가정용 상품 구성</caption>
+        <thread>
+            <!-- 1번째 행 -->
+        <tr>
+            <th>용도</th>
+            <th>중량</th>
+            <th>갯수</th>
+            <th>가격</th>
+        </tr>
+         <!-- 2번째 행 -->
+        <tr>
+            <th rowspan="2">선물용</th>
+            <th>3kg</th>
+            <th>11~16과</th>
+            <th>35,000원</th>
+        </tr>
+        <tr>
+            <th>5kg</th>
+            <th>18~26과</th>
+            <th>52,000원</th>
+        </tr>
+        <tr>
+            <th rowspan="2">가정용</th>
+            <th>3kg</th>
+            <th>11~16과</th>
+            <th>30,000원</th>
+        </tr>
+        <tr>
+            <th>5kg</th>
+            <th>18~26과</th>
+            <th>47,000원</th>
+        </tr>
+        </thread>
+    </table>
+</body>
+</html>

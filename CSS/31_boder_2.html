@@ -26,8 +26,8 @@
             border-width: thick thin; /*top,bottom - thick / left,right = thin*/
         }
 
-        #box3 {
-            border-width: thick thin thin; /*top - thick / bottom,left,right = thin*/
+        #box3 {/*right가 bottom으로 thin을 전이*/
+            border-width: thick thin thin; /*top-thick, right-thin, bottom-thin, left-thin*/
         }
         #box4 {
             border-width: 10px 5px 5px 10px; /*상 우 하 좌*/

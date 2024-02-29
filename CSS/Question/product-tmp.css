@@ -1,4 +1,6 @@
-
+body{
+    background-image: url('https://i.namu.wiki/i/yxcxa6B4woWinBX2xDdouunYDQunZGYsKhS0d5wQ--7VjHDgtrdphedBdtb8pLjpocwjenlmtp2e1qNzsRuLZ5pdfk26YuXLkxkcvTshElIBNwJiWs_4K6u348EiMBdQCFl734SQ6xfG9eMf-7uriA.webp');
+}
 #container{
     width: 600px;
     border:none;
@@ -17,12 +19,14 @@ th, td{
     border-radius: 15px 15px 0px 0px;
     margin: 20px;
     padding: 10px 20px;
+    background-color: #fff;
 }
 #receipe{
     border: 1px;
     border-style: dotted;
     margin: 20px;
     padding: 10px 20px;
+    background-color: #fff;
 }
 #package{
     border: 1px;
@@ -30,4 +34,5 @@ th, td{
     border-radius:  0px 0px 15px 15px;
     margin: 20px;
     padding: 10px 20px 20px 20px;
+    background-color: #fff;
 }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navi ul li{
+            float: left;
+            width: 150px;
+            padding: 10px;
+        }
+        /*
+        : link
+        : visited
+        : hover
+        :
+        */
+        .navi a:link, .navi a:visited{
+            display: block;
+            font-size: 14px;
+            color:#000;
+            padding: 10px;
+            text-decoration: none;
+            text-align:center;
+        }
+        .navi a:hover, .navi a:focus{
+            background-color: #222;
+            color: #fff;
+        }
+        .navi a:active{
+            background-color: #f00;
+        }
+        .contents{
+            margin: 30px auto;
+            width: 400px;
+            padding:20px;
+            border: 1px solid #222;
+            border-radius: 5px;
+        }
+        #intro:target{
+            background-color: #003df4;
+            color: #fff;
+        }
+        #room:target{
+            background-color: #ecb7ea;
+            color: #fff;
+        }
+        #reservation:target{
+            background-color: #a34;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navi">
+            <ul>
+                <li><a href="#intro">이용안내</a></li>
+                <li><a href="#room">객실소개</a></li>
+                <li><a href="#reservation">예약방법 및 요금</a></li>
+                <li><a href="79_ps_2.html">예약하기</a></li>
+            </ul>
+        </nav>
+        <div id="intro" class="contents">
+            <h2>이용 안내</h2>
+            <p>개별적인 숙박도 가능하지만 각종 모임, 세미나, 학회 등 단체숙박을 위한 전체대관도 가능합니다. 전체대관은 매화관 등 숙박동 4채를 모두 대여하는 것으로 30명 ~ 40명의 단체에 적합하고 각종 회의나 세미나가 필요한 경우 교육관 대관도 가능합니다.마당에는 야생화가 철마다 피어나고 텃밭에서 키워진 깻잎, 고추, 오이 등 제철 채소들은 부침개와 겉절이 등이 되어 ‘하룻밤 손님’들의 허기를 달래 줄 것입니다.</p>
+        </div>
+        <div id="room" class="contents">
+            <h2>객실 소개</h2>
+            <p>※ 공통 : 전통구들, 에어컨, 옷장, 드라이기, 커피포트, 화장실
+
+                ( 치약 칫솔 면도기는 준비해 오세요)
+                ※특별할인 : 서천군민 20% 할인</p>
+        </div>
+        <div id="reservation" class="contents">
+            <h2>예약 방법 및 요금</h2>
+            <p> 예약전화 : 010-5542-5888 / 041-953-5896
+                - 예약계좌 : 농협 301-0169-6042-51, 예금주 : 농업회사법인가온누리유한회사
+                ※ 문헌전통호텔 이용 규칙및 주의사항
+                
+                숙소 이용 규칙 안내문 (예약 전 필수 확인사항)
+                
+                - 입실시간 15:00 / 퇴실시간 11:00
+                
+                - 예약신청 후 6시간 내로 전액 입금하셔야 예약 완료됩니다, (6시간 경과 후 예약신청이 자동 취소됩니다.)</p>
+        </div>
+    </div>
+</body>
+</html>

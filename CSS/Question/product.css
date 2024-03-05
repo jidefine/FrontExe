@@ -1,0 +1,19 @@
+#container{
+    text-align: center;
+}
+div ul{
+    list-style: none;
+}
+div ul li{
+    display: inline-block;
+}
+.caption{
+    width:299px;
+    height:200px;
+    border:1px solid #222;
+    background-color:black;
+    color: #fff;
+}
+.caption:hover{
+    transform: translateY(-200px);
+}

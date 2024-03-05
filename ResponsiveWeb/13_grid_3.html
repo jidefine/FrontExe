@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wraper1 {
+            display: grid;
+            /*화면을 가득 채우도록 컬럼 자동 늘림*/
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            margin-bottom: 20px;
+        }
+        #wraper2 {
+            display: grid;
+            /*컬럼 최소 너비만큼 채워서 늘림*/
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+h1{
+    font-size: 24px;
+}
+        .items {
+            padding: 15px;
+            background-color: #eee;
+        }
+        .items:nth-child(odd){
+            background-color: #8f8f8f;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h>auto-fit일때</h>
+    <div id="wraper1">
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+    </div>
+    <h>auto-fill일때</h>
+    <div id="wraper2">
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wraper1 {
+            display: grid;
+            /*화면을 가득 채우도록 컬럼 자동 늘림*/
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            margin-bottom: 20px;
+        }
+
+        #wraper2 {
+            display: grid;
+            /*컬럼 최소 너비만큼 채워서 늘림*/
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: minmax(100px, auto);
+            grid-gap: 20px 30px;
+            /*줄간격 컬럼간격*/
+
+
+            .items {
+                padding: 15px;
+                background-color: #eee;
+            }
+
+            /* odd, 2n+1는 홀수 / even, 2n은 짝수*/
+            .items:nth-child(odd) {
+                background-color: #8f8f8f;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wraper1">
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+        <div class="items">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+    </div>
+</body>
+
+</html>

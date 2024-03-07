@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const input = prompt('숫자를 입력', '');
+        const num = Number(input);
+
+        for (let i = 1; i <= num; i++) {
+            if (i<=num/2+1) {
+                for (let k = 1; k <=num/2+1-i; k++) {
+                    document.write("-");
+                }
+                for (let j = 1; j <= 2 * i - 1; j++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+            else if(i>num/2+1){
+                for (let k = 1; k <=i-num/2; k++) {
+                    document.write("-");
+                }
+                for (let j = 1; j <= (num-i)*2+1; j++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

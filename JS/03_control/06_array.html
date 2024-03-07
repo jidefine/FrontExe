@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const str = 'hello';
+        console.log(str[2])
+
+        const nameArr = ['홍길동', '임꺽정', '도비', 'alex'];
+        console.log('배열 길이 : ' + nameArr.length);
+        console.log(nameArr);
+        console.log(nameArr[3]);
+
+        nameArr.push('Henry'); // 배열 맨 뒤에 추가
+        console.log(nameArr);
+        nameArr[20]= 'peter';
+        console.log(nameArr);
+
+        const array = [3.14, '으악', 10, ['a', 'b', 'c']];
+        console.log(array);
+        array[array.length] = '사과'; // push처럼 배열 맨 뒤에 추가
+        array[array.length] = '귤';
+
+        array.splice(2, 1); //인덱스 2 위치에서 1개 제거
+        console.log(array);
+
+        console.log('으악의 위치는 ' + array.indexOf('으악'));
+
+        const fruits = ['apple', 'lemon', 'grape', 'kiwi'];
+        fruits.splice(1, 0 , 'watermellon'); //인덱스 1의 위치에 'watermellon' 추가하기
+        console.log(fruits);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

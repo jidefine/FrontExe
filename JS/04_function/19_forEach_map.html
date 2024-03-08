@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let numbers = [23, 22, 15, 78, 9 ,98];
+
+        // 필요한 인자가 몊 개인지 간에, 인자를 1개만 넣으면 value 값만 들어감
+        // 인자를 모두 넣어주지 않아도 실행은 됨
+        numbers.forEach(function(value){
+            console.log(value);
+        });
+
+        numbers.forEach(function(value, index){
+            console.log(index + ' : ' + value);
+        });
+
+        const nums1 = numbers.map(function(value){
+            return value /2;
+        })
+        const nums2 = numbers.map(function(value){
+            return value + 100;
+        })
+        nums1.forEach(console.log);
+        nums2.forEach(console.log);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

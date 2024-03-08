@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //배열을 입력받아서 최소값을 리턴하는 함수
+        function min(array){
+            let min_num = 0;
+            for(let i=0; i<=array.length-2; i++){
+                if(Number(array[i]) < Number(array[i+1])){
+                    if(min_num!=0 && min_num< Number(array[i])){
+                        min_num = min_num
+                        console.log(i + "번째");
+                        console.log(min_num)
+                    }
+                    else{
+                        min_num = Number(array[i]);
+                        console.log(i + "번째");
+                        console.log(min_num)
+                    }
+                }
+                else{
+                    if(min_num!=0 && min_num< Number(array[i+1])){
+                        min_num = min_num
+                        console.log(i + "번째");
+                        console.log(min_num)
+                    }
+                    else{
+                        min_num = Number(array[i+1]);
+                        console.log(i + "번째");
+                        console.log(min_num)
+                    }
+                }
+            }
+            return min_num;
+        }
+
+        const testArray = [52, 273, 99, 1, 28, 3];
+        console.log(`최소값 = ${min(testArray)}`);
+
+        /* tutor 풀이
+        function min(array) {
+            let min = array[0]; // 첫번째 값을 최초 기준으로 삼는다.
+
+            for (let item of array) {
+                if (min > item)
+                    min = item;
+            }
+
+            return min;
+        }
+
+        // 배열을 입력받아서 최대값을 리턴하는 함수
+        function max(array) {
+            let min = array[0]; // 첫번째 값을 최초 기준으로 삼는다.
+
+            for (let item of array) {
+                if (min < item)
+                    min = item;
+            }
+
+            return min;
+        }
+
+        const testArray = [52, 273, 99, 1, 28, 3];
+        console.log(`최소값 = ${min(testArray)}`);
+        console.log(`최대값 = ${max(testArray)}`);
+        */
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

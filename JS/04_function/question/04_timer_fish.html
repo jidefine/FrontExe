@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+move_fish에서 button을 2개 생성
+1개는 '시작' 버튼
+1개는 '멈춤' 버튼
+
+'시작' 버튼을 누르면 물고기가 자동으로 왕복 움직이도록
+'멈춤' 버튼을 누르면 물고기가 멈추도록 
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #panel {
+            width: 500px;
+            height: 500px;
+            border: 3px solid #999;
+            position: relative;
+        }
+
+        #fish {
+            position: absolute;
+            left: 50px;
+            top: 120px;
+        }
+
+        #nav {
+            margin-top: 20px;
+            text-align: center;
+            width: 500px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let $fish = document.querySelector('#fish');
+            let $button1 = document.querySelector('#btnMove');
+            let $button2 = document.querySelector('#btnStop');
+
+            let isStart = false;        // 시작/멈춤 여부
+            let timerID = null;         // 타이머 핸들
+            const INTERVAL = 100;       // 타이머 주기
+
+            const MOVE_VAL = 50;
+            let step = MOVE_VAL;
+            const MAX_X = 350;
+            const MIN_X = 10;
+
+            clearInterval(timerID);
+
+            $button1.addEventListener('click', () => {
+                if (!isStart) {
+                    startTimer();
+                }
+                isStart = !isStart;
+            });
+
+            $button2.addEventListener('click', () => {
+                if (isStart) {
+                    clearInterval(timerID);
+                    timerID = null;
+                }
+                isStart = !isStart;
+            });
+
+            function startTimer() {
+                if (timerID == null) {
+                    timerID = setInterval(() => {
+                        let x = $fish.getBoundingClientRect().left + step;
+
+                        for (let i = 50; i <= 430; i++) {
+                            if (x >= MAX_X) {
+                                x = MAX_X;
+                                $fish.setAttribute('src', '../../../images2/fish2.png');
+                                step = -MOVE_VAL;
+                            } else if (x < MIN_X) {
+                                x = MIN_X;
+                                $fish.setAttribute('src', '../../../images2/fish1.png');
+                                step = MOVE_VAL;
+                            }
+                            $fish.style.left = x + 'px';
+                        }
+                    }, INTERVAL);
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div id="panel">
+        <img src="../../../images2/fish.png" id="fish">
+        <div id="bar"></div>
+    </div>
+    <div id="nav">
+        <button id="btnMove">시작</button>
+        <button id="btnStop">멈춤</button>
+    </div>
+
+</body>
+
+</html>

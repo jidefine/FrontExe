@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+물고기를 상자에 띄우고
+물고기를 5초안에 최대한 클릭할 것
+클릭한 횟수가 상자위에 출력될 것
+5초가 지나면 더 이상 클릭횟수 증가하지 않음. 
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #panel {
+            width: 600px;
+            height: 400px;
+            border: 3px solid #999;
+            position: relative;
+        }
+
+        #fish {
+            position: absolute;
+            left: 50px;
+            top: 120px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let $fish = document.querySelector('#fish');
+
+            let isStart = false;        // 시작/멈춤 여부
+            let timerID = null;         // 타이머 핸들
+            const INTERVAL = 100;       // 타이머 주기
+            let count = 0;              //카운트
+
+            const MOVE_VAL = 50;
+            let step = MOVE_VAL;
+            const MAX_X = 350;
+            const MIN_X = 10;
+
+            clearInterval(timerID);
+
+            id = setInterval(function () {
+                ++count;
+            }, 1000);
+
+            setTimeout(() => {
+                alert('게임이 종료되었습니다.');
+                clearInterval(id); // id에 해당하는 타이머 종료
+            }, 5000)
+
+            $fish.addEventListener('click', () => {
+                let x = $fish.getBoundingClientRect().left + step;
+
+                if(x >= MAX_X){
+                    x = MAX_X;
+                    $fish.setAttribute('src', '../../../images2/fish2.png');
+                    step = -MOVE_VAL;
+                }else if(x < MIN_X){
+                    x = MIN_X;
+                    $fish.setAttribute('src', '../../../images2/fish1.png');
+                    step = MOVE_VAL;
+                }
+
+                $fish.style.left = x + 'px';
+            });
+            
+
+        });
+    </script>
+</head>
+
+<body>
+    <h3>현재 점수</h3>
+    <div id="panel">
+        <img src="../../../images2/fish.png" id="fish">
+    </div>
+</body>
+
+</html>

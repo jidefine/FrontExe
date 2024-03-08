@@ -12,7 +12,7 @@
         for (let i = 1; i <= num; i++) {
             if (i<=num/2+1) {
                 for (let k = 1; k <=num/2+1-i; k++) {
-                    document.write("-");
+                    document.write("\u00A0");
                 }
                 for (let j = 1; j <= 2 * i - 1; j++) {
                     document.write("*");
@@ -21,7 +21,7 @@
             }
             else if(i>num/2+1){
                 for (let k = 1; k <=i-num/2; k++) {
-                    document.write("-");
+                    document.write("\u00A0");
                 }
                 for (let j = 1; j <= (num-i)*2+1; j++) {
                     document.write("*");

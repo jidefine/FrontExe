@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // first는 무조건 매개변수 1개는 들어가야 함
+        // rests는 가변 변수로, 있을 경우에는 들어감 / 없으면 안 들어감
+        function min(first, ...rests){
+            let min;
+            let item;
+
+            if(Array.isArray(first)){ // first 인자가 배열이니?
+                min = first[0]; 
+                items = first; //전체 배열을 받음
+            }else if(typeof(first)==='number'){ // first 인자(32)가 number 타입이니?
+                min = first;
+                items = rests; // first 인자(32)를 제외한 나머지 배열을 받음
+            }
+
+            for(const item of items){
+                if(min>item)
+                min = item;
+            }
+            return min;
+        }
+        console.log(`min(배열) : ${min([32, 77, 10, 5, 100])}`);
+        console.log(`min(숫자, ...) : ${min([32, 77, 10, 5, 100])}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

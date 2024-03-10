@@ -48,26 +48,31 @@
             }, 1000);
 
             setTimeout(() => {
-                alert('게임이 종료되었습니다.');
-                clearInterval(id); // id에 해당하는 타이머 종료
-                
+                isStart = !isStart;
+                if (!isStart) {
+                    alert('게임이 종료되었습니다.');
+                    clearInterval(id); // id에 해당하는 타이머 종료
+                }
             }, 5000)
 
+
             $fish.addEventListener('click', () => {
-                let x = $fish.getBoundingClientRect().left + step;
+                if (isStart) {
+                    let x = $fish.getBoundingClientRect().left + step;
 
-                if (x >= MAX_X) {
-                    x = MAX_X;
-                    $fish.setAttribute('src', '../../../images2/fish2.png');
-                    step = -MOVE_VAL;
-                } else if (x < MIN_X) {
-                    x = MIN_X;
-                    $fish.setAttribute('src', '../../../images2/fish1.png');
-                    step = MOVE_VAL;
+                    if (x >= MAX_X) {
+                        x = MAX_X;
+                        $fish.setAttribute('src', '../../../images2/fish2.png');
+                        step = -MOVE_VAL;
+                    } else if (x < MIN_X) {
+                        x = MIN_X;
+                        $fish.setAttribute('src', '../../../images2/fish1.png');
+                        step = MOVE_VAL;
+                    }
+
+                    $fish.style.left = x + 'px';
+                    $output.textContent = '현재 점수 ' + ++score;
                 }
-
-                $fish.style.left = x + 'px';
-                $output.textContent ='현재 점수 ' + ++score;
             });
 
 

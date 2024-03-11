@@ -14,6 +14,12 @@ move_fish에서 button을 2개 생성
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /*[position]
+            static   : 기본값, 문서의 흐름에 맞춰 배치
+            relative : static과 동일하지만, 위치값을 지정 가능
+            absolute : relative를 사용한 상위 요소를 기준으로 위치값을 지정
+            fixed    : 브라우저 창을 기준으로 위치 지정 */
+
         #panel {
             width: 600px;
             height: 300px;
@@ -22,7 +28,7 @@ move_fish에서 button을 2개 생성
         }
 
         #bar {
-            position: absolute;
+            position: absolute; /*panel의 position을 기준으로 위치값을 지정*/
             left: 50px;
             top: 190px;
             width: 500px;
@@ -38,55 +44,62 @@ move_fish에서 button을 2개 생성
 
         #nav {
             margin-top: 20px;
-            text-align: center;
+            text-align: center; /*텍스트 정렬: center, left, right*/
             width: 600px;
         }
     </style>
     <script>
+        // HTML 문서가 완전히 로드되고 파싱된 후 실행될 코드 블록을 정의
+        // 파싱 : 브라우저가 HTML 문서를 읽고 해석하는 과정
+        // DOM(Document Object Model) : 문서 객체 모델
+        // DOM 요소 : <div>, <p>, <span> 등의 HTML 태그
         document.addEventListener('DOMContentLoaded', () => {
             //jquery에서 유래된 $를 element(요소)에 붙이는 관습(안 지켜도 실행됨)
             let $fish = document.querySelector('#fish');
-            let $button1 = document.querySelector('#btnMove');
-            let $button2 = document.querySelector('#btnStop');
+            const step_val = 50;
+            let step = step_val;
+            const max_x = 430;
+            const min_x = 50;
+            let timerID = null;   // 타이머 핸들
+            const INTERVAL = 100; // 타이머 주기
 
-            const MOVE_VAL = 50;
-            let step = MOVE_VAL;
-            const MAX_X = 430;
-            const MIN_X = 50;
-            let timerID = null;         // 타이머 핸들
-            const INTERVAL = 100;       // 타이머 주기
+            let $btnStart = document.querySelector('#btnStart');
+            let $btnStop = document.querySelector('#btnStop');
 
-            $button1.addEventListener('click', () => {
-                 // 타이머가 작동하면 추가로 동작하지 못하도록
-                 if(timerID !== null)
+            $btnStart.addEventListener('click', () => {
+                // 타이머가 작동하면 추가로 동작하지 못하도록
+                if(timerID !== null)
                     return;
 
+                // 화살표 함수(arrow function)를 사용하여  setInterval 함수를 정의
+                // setInterval 함수: 일정한 시간 간격으로 함수를 반복적으로 실행하는 타이머를 설정
                 timerID = setInterval(() => {
-                        let x = $fish.getBoundingClientRect().left + step;
+                    // $fish 요소의 왼쪽 가장자리 좌표에 step 값을 더한 새로운 X 좌표를 변수 x에 할당
+                    let x = $fish.getBoundingClientRect().left + step;
 
-                        for (let i = 50; i <= 430; i++) {
-                            if (x >= MAX_X) {
-                                x = MAX_X;
-                                $fish.setAttribute('src', '../../../images2/fish2.png');
-                                step = -MOVE_VAL;
-                            } else if (x < MIN_X) {
-                                x = MIN_X;
-                                $fish.setAttribute('src', '../../../images2/fish1.png');
-                                step = MOVE_VAL;
-                            }
-                            $fish.style.left = x + 'px';
-                        }
-                    }, INTERVAL);
+                    if(x >= max_x){
+                        x = max_x;
+                        // $fish 요소의 src 속성을 변경하여 '../../../images2/fish2.png'의 이미지 경로를 가진 새로운 이미지로 교체
+                        $fish.setAttribute('src', '../../../images2/fish2.png');
+                        step = -step_val;
+                    }else if(x < min_x){
+                        x = min_x;
+                        $fish.setAttribute('src', '../../../images2/fish1.png');
+                        step = step_val;
+                    }
+
+                    $fish.style.left = x + 'px'; // x값으로 이동
+                }, INTERVAL);
             });
 
-            $button2.addEventListener('click', () => {
-                 // 타이머가 동작하지 않는다면 멈출 필요없다.
-                 if(timerID === null)
+            $btnStop.addEventListener('click', () => {
+                // 타이머가 동작하지 않는다면 멈출 필요없다.
+                // timerID가 null일 때만 함수 내부의 코드가 실행되고, 그렇지 않으면 함수가 즉시 종료
+                if(timerID === null)
                     return;
 
                 clearInterval(timerID);
                 timerID = null;
-
             });
         });
     </script>
@@ -98,7 +111,7 @@ move_fish에서 button을 2개 생성
         <div id="bar"></div>
     </div>
     <div id="nav">
-        <button id="btnMove">시작</button>
+        <button id="btnStart">시작</button>
         <button id="btnStop">멈춤</button>
     </div>
 

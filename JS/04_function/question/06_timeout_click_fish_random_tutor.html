@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .panel {
+            width: 600px;
+            height: 400px;
+            border: 2px solid black;
+            position: relative;
+            background-image: url('https://postfiles.pstatic.net/MjAxNjEyMTJfMzUg/MDAxNDgxNTI4NzgzMDMy._CufqkC-7cu5mn0owlMyJOIhxI69y6IWTN53W696DSkg.QpoxJlGvPe5_AByjgzpxNSG89SNqRErljUZYAzP7NvAg.JPEG.happyjejudo/twi001t1507458.jpg?type=w966');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 20%;
+        }
+
+        .panel #fish {
+            position: absolute;
+            left: 250px;
+            top: 150px;
+        }
+
+        #gameover {
+            text-align: center;
+            vertical-align: middle;
+            font-weight: bold;
+            font-size: 5rem;
+            color: #fff;
+            text-shadow: 5px 5px 4px rgb(0, 255, 0);
+            opacity: 0;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let count = 0;
+            const INTERVAL = 700;       // 0.7초만큼 멈춰있다가 이동
+            const TIME_OUT = 5000;      // 총 게임 시간 5초
+            const MAX_X = 600 - 120;    // 물고기 너비만큼 빼줌
+            const MAX_Y = 400 - 70;     // 물고기 높이만큼 빼줌
+            let isPlaying = true;
+            let timerID = null;
+            let $score = document.querySelector('#score');
+            let $fish = document.querySelector('#fish');
+
+            let $gameover = document.querySelector('#gameover');
+
+            $fish.addEventListener('click', () => {
+                if (isPlaying) {
+                    $score.textContent = ++count;
+                }
+            });
+
+            timerID = setInterval(() => {
+                let x = parseInt(Math.random() * MAX_X);
+                let y = parseInt(Math.random() * MAX_Y);
+
+                $fish.style.left = x + 'px';
+                $fish.style.top = y + 'px';
+            }, INTERVAL);
+
+            setTimeout(() => {
+                isPlaying = false;
+                clearInterval(timerID);
+                showEndTitle();
+                // alert('게임이 종료되었습니다');
+            }, TIME_OUT);
+
+            function showEndTitle() {
+                $gameover.animate(
+                    {
+                        opacity: [
+                            0.0,  // 시작 값
+                            1.0  // 종료 값
+                        ]
+                    },
+                    {
+                        durations: 1500,  // 밀리초 지정
+                        fill: 'forwards',  // 종료 시 속성을 지님\
+                        easing: 'ease'  // 가속도 종류
+                    }
+                )
+        }
+        });
+    </script>
+</head>
+
+<body>
+    <div>현재 점수 <span id="score">0</span></div>
+    <div class="panel">
+        <img src="../../../images2/fish.png" id="fish">
+        <p id="gameover">The End</p>
+    </div>
+</body>
+
+</html>

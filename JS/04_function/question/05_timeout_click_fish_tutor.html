@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .panel {
+            width: 600px;
+            height: 400px;
+            border: 2px solid #999;
+            position: relative;
+        }
+
+        .panel #fish {
+            position: absolute;
+            left: 250px;
+            top: 150px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () =>{
+            let count = 0;
+            const INTERVAL = 5000;
+            let isPlaying = true;
+            let $score = document.querySelector('#score');
+            let $fish = document.querySelector('#fish');
+
+            $fish.addEventListener('click', () =>{
+                if(isPlaying){
+                    $score.textContent = ++count
+                }
+            })
+
+            setTimeout(() =>{
+                isPlaying = false;
+                alert('게임이 종료되었습니다');
+            }, INTERVAL)
+        });
+    </script>
+</head>
+<body>
+    <div>현재 점수 <span id="score">0</span></div>
+    <div class="panel">
+        <img src="../../../images2/fish.png" id="fish">
+    </div>
+</body>
+</html>

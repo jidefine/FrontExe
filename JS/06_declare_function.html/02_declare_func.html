@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        선언적 함수는 가장 먼저 메모리에 로딩된다
+        이것을 '호이스팅'이라고 한다.
+        그러므로 아래에 선언된 함수를 위에서 사용할 수 있다.
+
+        아래에서 첫번째 함수와 두번째 함수 모두 호이스팅되나, 
+        순서대로 실행되면서 2번째 함수가 실행됨
+        */
+        declare(); // 2번째 선언적 함수 출력
+
+        function declare(){
+            console.log('1번째 선언적 함수');
+        }
+        
+        function declare(){
+            console.log('2번째 선언적 함수');
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

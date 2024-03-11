@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let anonym;
+        /*
+        익명함수 리터럴 방식 함수 선언은 '호이스팅'이 일어나지 않음
+        위에서 아래의 흐름대로 사용하게 됨
+        */
+        /* anonym(); //Uncaught TypeError: anonym is not a function*/
+
+        // var 로 선언된 것
+        // var 은 덮어쓸 수 있음(호이스팅이 됨)
+        anonym = function(){ 
+            console.log('1번째 익명함수');
+        }
+
+        // 순서대로 실행되면서 덮어씀
+        anonym = function(){
+            console.log('2번째 익명함수');
+        }
+
+        anonym(); // 2번째 익명함수 출력
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

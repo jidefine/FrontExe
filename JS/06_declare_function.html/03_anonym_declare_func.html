@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        아래의 '선언적 함수'가 먼저 '호이스팅'되고
+        위의 '익명 함수'가 나중에 메모리에 로딩되므로
+        나중에 만들어진 '익명 함수'를 호출하게 된다.
+
+        '선언적 함수'는 우리가 코드를 읽는 순서와 다른 순서로 함수가 선언된다
+        그러므로 우리가 코드를 읽는 순서오 같은 '익명 함수'를 더 선호함
+        */
+    
+        func = function (){ //2. 이후에 메모리에 올라감(func를 덮어씀)
+            console.log('1번째 익명 함수');
+        }
+        
+        function func(){  // 1. 먼저 메모리에 올라감
+            console.log('2번째 선언적 함수');
+        }
+
+        func(); // 1번째 익명 함수 출력
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

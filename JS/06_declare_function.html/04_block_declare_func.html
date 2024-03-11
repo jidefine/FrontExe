@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        declare(); // 1번째 선언적 함수 출력
+        declare(); // 1번째 선언적 함수 출력     // 2. 출력
 
         function declare(){
-            console.log('1번째 선언적 함수');
+            console.log('1번째 선언적 함수');   // 1. 먼저 실행
         }
     </script>
     <script>
         function declare(){
-            console.log('2번째 선언적 함수');
+            console.log('2번째 선언적 함수');  // 3. 나중에 실행
         }
     </script>
     <script>
-        declare(); // 2번째 선언적 함수 출력
+        declare(); // 2번째 선언적 함수 출력   // 4. 출력
     </script>
 </head>
 <body>

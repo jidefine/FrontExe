@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #panel{
-            width:600px;
-            height:300px;
-            border:1px solid #999;
-            position:relative;
+        #panel {
+            width: 600px;
+            height: 300px;
+            border: 1px solid #999;
+            position: relative;
         }
-        #bar{
-            position:absolute;
-            left:50px;
-            top:190px;
-            width:500px;
-            height:20px;
-            background:#f30;
+
+        #bar {
+            position: absolute;
+            left: 50px;
+            top: 190px;
+            width: 500px;
+            height: 20px;
+            background: #f30;
         }
-        #fish{
-            position:absolute;
-            left:50px;
-            top:120px;
+
+        #fish {
+            position: absolute;
+            left: 50px;
+            top: 120px;
         }
-        #nav{
-            margin-top:20px;
-            text-align:center;
-            width:600px;
+
+        #nav {
+            margin-top: 20px;
+            text-align: center;
+            width: 600px;
         }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', () =>{
+        document.addEventListener('DOMContentLoaded', () => {
             let $fish = document.querySelector('#fish');
             let $button = document.querySelector('#btnMove');
             const MOVE_VAL = 50;
@@ -41,26 +45,21 @@
 
             $button.addEventListener('click', () => {
                 let x = $fish.getBoundingClientRect().left + step;
-                if(x >= MAX_X){
-                    x= MAX_X;
+                if (x >= MAX_X) {
+                    x = MAX_X;
                     $fish.setAttribute('src', "../../images2/fish.png");
                     step = -MOVE_VAL; //방향 전환
-                }else if(x < MIN_X){
+                } else if (x < MIN_X) {
                     x = MIN_X;
                     $fish.setAttribute('src', '../../images2/fish1.png');
                     step = MOVE_VAL;
                 }
                 $fish.style.left = x + 'px';
-        });
-
-            let count = 0;
-
-            setInterval(function(){
-                $output.textContent = ++count;
-            }, 1000);
+            });
         });
     </script>
 </head>
+
 <body>
     <div id="panel">
         <img src="../../images2/fish.png" id="fish">
@@ -70,4 +69,5 @@
         <button id="btnMove">움직임</button>
     </div>
 </body>
+
 </html>

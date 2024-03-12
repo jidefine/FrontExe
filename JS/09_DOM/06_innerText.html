@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () =>{
+            const a = document.querySelector('#a');
+            const b = document.querySelector('#b');
+
+            a.textContent = '<h1>textContent 속성</h1>'; // 문자열 그래돌 삽입(최신)
+            b.innerHTML = '<h1>innerHTML 속성</h1>';     // html 요소로 인식하고 삽입
+            c.innerText = '<h1>innerHTML 속성</h1>';     // 문자열 그래돌 삽입(과거)
+
+        });
+    </script>
+</head>
+<body>
+    <div id="a"></div>
+    <div id="b"></div>
+    <div id="c"></div>
+</body>
+</html>
+
+<!-- 미니프로젝트
+주제 1 웹페이지 잘 만들기
+주제 2 자바스크립트 라이브러리 활용해서 웹페이지 잘 만들기
+주제 3 다중 접속 서버 제작
+- 웹소켓 라이브러리를 가져와서 자바로 서버 제작
+- 자바스크립트로 프론트엔드 제작
+- 일부 배울 예정
+주제 4 all -->

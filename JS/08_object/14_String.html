@@ -30,16 +30,23 @@
         console.log(input);
 
         input = input.map((line) => line.split(','))
-        let newInput = [];
-        input.forEach(function(line){
-            let temp = [];
-            line.forEach(function(elem){
-                elem = elem.trim();     
-                temp.push(elem);
+
+        input = input.map(function(line){
+            line = line.map(function(elem){
+                return elem.trim();
             });
-            newInput.push(temp)
         });
-        
+
+        // let newInput = [];
+        // input.forEach(function(line){
+        //     let temp = [];
+        //     line.forEach(function(elem){
+        //         elem = elem.trim();     
+        //         temp.push(elem);
+        //     });
+        //     newInput.push(temp)
+        // });
+
         console.log(newInput);
 
         const jsonStr = JSON.stringify(newInput);

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a = 10, b = 20, c = 30;
+
+        let outer_func = function () {
+            let b = 200, c = 300;
+
+            let inner_func = function () {
+                let = 3000;
+                //inner_func() 안에 없으니까, outer_func()에서도 없으니까, 전역변수 a를 가져옴
+                console.log('a=' + a); 
+                // inner_func() 안에 없으니까, outer_func()의 지역변수 b 가져옴
+                console.log('b=' + b);
+                // inner_func()의 지역변수 c 가져옴
+                console.log('c=' + c);
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

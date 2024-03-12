@@ -40,8 +40,12 @@
         object에 name이 있으니까 !object.name는 false
         => 그래서 'name 속성 있음' 이 출력됨
         */
+        // 방법 1
         !object.name || console.log('name 속성 있음'); 
         !object.money || console.log('money 속성 있음');
+        // 방법 2
+        object.name && console.log('name 속성 있음'); 
+        object.money && console.log('money 속성 있음');
 
     </script>
 </head>

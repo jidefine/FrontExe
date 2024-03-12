@@ -13,13 +13,14 @@
         };
        
         const star = {...pet};      // 객체 정보가 나열되고 새로운 객체가 생성된다.
+        // console.log(star);       // pet 객체의 내용과 동일하게 출력됨
 
         star.name = '별';
         star.age = 3;
         star.color = '얼룩이';
 
-        console.log(pet);
-        console.log(star);
+        console.log(pet);  // pet과 star은 서로 독립적인 객체
+        console.log(star); 
     </script>
 </head>
 <body>

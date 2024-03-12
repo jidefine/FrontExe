@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .banner {
+            width: 400px;
+            height: 200px;
+            top: 10px;
+            left: 100px;
+            position: absolute;
+            border: 3px solid red;
+            box-shadow: 10px 10px #ccc;
+        }
+    </style>
+    <script>
+        /* 1초 단위로 타이머를 동작시켜서 logo_01.jpg ~ logo_08.jpg로 교체
+        단, 방향키 상을 누르면 교체 속도가 빨라지고
+        방향키 하를 누르면 교체 속도가 느려지게 된*/
+
+        document.addEventListener('DOMContentLoaded', () => {
+            let count = 0;
+            let speed = 1000;
+            let isPlaying = true;
+            let timeID = null;
+            let $banner = document.querySelector('#banner');
+            let i = 1;
+
+
+            // setTimeout(() => {
+            //     isPlaying = false;
+            //     alert('종료되었습니다');
+            //     clearInterval(timerID);
+            // }, 10000);
+
+            timerID = setInterval(() => {
+                if (isPlaying) {
+                    switch (i) {
+                        case 1:
+                            $banner.setAttribute('src', '../../../images2/logo_01.jpg');
+                            i++;
+                            break;
+                        case 2:
+                            $banner.setAttribute('src', '../../../images2/logo_02.jpg');
+                            i++;
+                            break;
+                        case 3:
+                            $banner.setAttribute('src', '../../../images2/logo_03.jpg');
+                            i++;
+                            break;
+                        case 4:
+                            $banner.setAttribute('src', '../../../images2/logo_04.jpg');
+                            i++;
+                            break;
+                        case 5:
+                            $banner.setAttribute('src', '../../../images2/logo_05.jpg');
+                            i++;
+                            break;
+                        case 6:
+                            $banner.setAttribute('src', '../../../images2/logo_06.jpg');
+                            i++;
+                            break;
+                        case 7:
+                            $banner.setAttribute('src', '../../../images2/logo_07.jpg');
+                            i++;
+                            break;
+                        case 8:
+                            $banner.setAttribute('src', '../../../images2/logo_08.jpg');
+                            i = 1;
+                            break;
+
+                        default:
+                            alert('오류');
+                            break;
+                    }
+                }
+            }, speed);
+
+            document.addEventListener('keydown', function (e) {
+                console.log('입력 키 코드: ' + e.keyCode);
+                switch (e.keyCode) {
+                    case 38:
+                        speed-=200
+                        console.log('방향키 상 입력');
+                        break;
+                    case 40:
+                        speed+=200
+                        console.log('방향키 하 입력');
+                        break;
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <img src="../../../images2/logo_01.jpg" class="banner" id="banner">
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const object = {
+            name: '으악',
+            job: "백수",
+            age: 24
+        }
+
+        object.name = object.name !== undefined ? object.name : '무직';
+        object.money = object.money !== undefined ? object.money : '100억';
+
+        console.log(object);
+
+        object.name = object.name || '무직';
+        object.tech = object.tech || 'java, javascript';
+
+        console.log(object);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const pet = {
+            name: '구름',
+            eat(food){ // 함수 생성 방법 2
+                console.log(this.name + ' 은/는 ' + food + ' 를 먹는다')
+            }
+        }
+
+        pet.eat('밥');
+        pet.eat('미역국');
+        pet.eat('라면');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

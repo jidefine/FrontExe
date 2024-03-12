@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const array = [];           // 배열(객체)
+        array.sample = 10;          // 동적 요소 추가
+        console.log(array.sample);
+        console.log(typeof array);
+        console.log(Array.isArray(array));
+        console.log('');
+
+        function b(){};             // 함수(객체), 일급 객체
+        b.sample = 10;              // 동적 요소 추가
+        console.log(b.sample);
+        console.log(typeof b);
+        console.log(Array.isArray(b));
+        console.log('');
+
+        const c = 273; // 기본 타입 number(객체가 아님)
+        c.sample = 10;
+        console.log(c);
+        console.log(c.sample);
+        console.log(typeof c);
+        console.log('');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

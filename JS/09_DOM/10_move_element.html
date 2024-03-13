@@ -8,15 +8,15 @@
         document.addEventListener('DOMContentLoaded', () => {
             const divA = document.querySelector('#first');
             const divB = document.querySelector('#second');
-            const h1 = document.createElement('h1');
+            const h1 = document.createElement('h1'); // h1 요소 생성
             h1.textContent = '이동하는 h1 태그';
 
             const toFirst = () => {
-                divA.appendChild(h1);
+                divA.appendChild(h1); // id가 'first'인 요소의 자식으로  h1 요소 추가
                 setTimeout(toSecond, 1000); // 1초 후
             }
             const toSecond = () => {
-                divB.appendChild(h1);
+                divB.appendChild(h1);// id가 'second'인 요소의 자식으로  h1 요소 추가
                 setTimeout(toFirst, 3000)   // 3초 후
             }
             toFirst();

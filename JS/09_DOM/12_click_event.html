@@ -7,10 +7,10 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             let counter = 0;
-            const h1 = document.querySelector('h1');
+            const h1 = document.querySelector('h1'); // 'h1'인 요소를 찾아 h1로 할당
 
             h1.addEventListener('click', (event)=> {
-                h1.textContent = `클릭 횟수 : ${++counter}`;
+                h1.textContent = `클릭 횟수 : ${++counter}`; // 클릭 시 counter 업데이트
             })
         })
     </script>

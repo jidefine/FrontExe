@@ -6,19 +6,24 @@
     <title>Document</title>
     <script>
         const numbers = [273, 52, 103, 32, 47];
-
+        // 방법 1
+        //callback 함수로 내장된 forEach 함수 호출
         numbers.forEach(function(value, index, array){
-            console.log(`${index}번째 요소: ${value}`);
+            console.log(`${index}번째 요소(1): ${value}`);
         });
+        console.log('');
 
+         // 방법 2
+        // 사용자가 직접 구현한 forEach 함수
         function forEach(array, callback){
             for(let i=0; i<array.length; i++){
                 callback(array[i], i , array);
             }
         }
 
+         //callback 함수로 사용자가 직접 구현한 forEach 함수 호출
         forEach(numbers, function(value, index, array){
-            console.log(`${index}번째 요소: ${value}`);
+            console.log(`${index}번째 요소(2): ${value}`);
         });
 
     </script>

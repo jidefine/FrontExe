@@ -7,16 +7,23 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
-                const h1 = document.querySelector('h1');
 
-                h1.parentNode.removeChild(h1);
+                const h1 = document.querySelector('h1'); // 'h1'인 요소를 찾아 h1로 할당
+                h1.parentNode.removeChild(h1); // 'h1' 요소의 부모 요소인 <body>에서 h1 요소를 제거
+
+                const h2 = document.querySelector('.exe'); // 클래스가 'exe'인 요소를 찾아 h2로 할당
+                h2.parentNode.removeChild(h2); // 'h2' 요소의 부모 요소인 <body>에서 h2 요소를 제거
             }, 3000);
         });
     </script>
 </head>
 <body>
-    <hr>
+    <hr> <!--수평선 생성 -->
     <h1>제거 대상 문서 객체</h1>
     <hr>
+    <br>
+    <div class="exe">
+        <h2>제거해보아라</h2>
+    </div>
 </body>
 </html>

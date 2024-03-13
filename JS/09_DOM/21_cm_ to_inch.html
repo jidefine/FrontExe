@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            let nowVal;
+            let chgVal = 10;
+
+            const select = document.querySelector('select');
+            const input = document.querySelector('input');
+            const span = document.querySelector('span');
+
+            const calculate = () => {
+                span.textContent = (nowVal * chgVal).toFiexed(2);// toFiexed(2) : 소수점 둘째자리 까지
+            }
+
+            select.addEventListener('change', (event)=>{
+                const options = event.currentTarget.options;
+                const index = event.currentTarget.options.selectedIndex;
+                chgVal = Number(options[index].value)
+                calculate();
+            });
+
+            input.addEventListener('keyup', (event)=>{
+                newVal = Number
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

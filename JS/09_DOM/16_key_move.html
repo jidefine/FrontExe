@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () =>{
+            const star = document.querySelector('h1');
+            star.style.position = 'absolute';
+
+            let [x, y] = [0, 0]; // x, y 변수 선언 후 각각 0과 0으로 값을 할당(배열 아님)
+            const block = 20;
+            const print = () => {
+                star.style.left = `${x*block}px`;
+                star.style.top = `${y*block}px`;
+            }
+            print();
+
+            const [ left, up, right, down] = [37, 38, 39, 40]; // 변수 선언 후 각각 0과 0으로 값을 할당(배열 아님)
+            document.body.addEventListener('keydown', (event)=>{
+                switch(event.keyCode){
+                    case left: x--; break;
+                    case up: y--; break;
+                    case right: x++; break;
+                    case down: y++; break;
+                }
+                print();
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>★</h1>
+</body>
+</html>

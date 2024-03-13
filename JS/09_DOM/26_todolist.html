@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할 일 목록</title>
+    <script>
+        document.addEventListener('DONContentLoaded', () =>{
+            const input = document.querySelector('#todo');
+            const todolist = document.querySelector('#todo-list');
+            const addbutton = document.querySelector('#add-button');
+
+            let keyCount = 0;
+
+            const addTodo = () =>{
+                if(input.value.trim()===''){
+                    alert('할 일을 입력해주세요.');
+                    return;
+                }
+
+                //동적 생성
+                const item = document.createElement('div');
+                const checkbox = document.createElement('input');
+                const text = document.createElement('span');
+                const button = document.createElement('button');
+                
+                const key = keyCount++;
+
+                item.setAttribute('data-key', key);
+                item.appendChild(checkbox);
+                item.appendChild(text);
+                item.appendChild(button);
+                todoList.appendChild(item);
+
+                checkbox.type = 'checkbox';
+                checkbox.addEventListener('change', (event)=>{
+                    item.style.textDecoration = event.target.checked ? 'line-through' : '';
+                });
+                text.textContent = input.value;
+
+                button.textContent = '제거하기';
+                button.addEventListener('click', ()=>{
+                    removeTodo(key);
+                });
+
+                input.value = ''; // 입력창을 비워준다
+
+                input.focus(); // 포커스를 다시 입력창으로
+            }
+
+            const removeTodo = (key)=>{
+                const item = document.querySelector(`[data-key="${key}"]`);
+                todoList.removeChild(item);
+            }
+            
+            addbutton.addEventListener('click', addTodo);
+            input.addEventListener('keyup', (event)=>{
+                const ENTER = 13; // enter 키 입력값
+                IF(event.keyCode == ENTER)
+                addTodo();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>할 일 목록</h1>
+    <input id="todo">
+    <button id="add-button">추가하기</button>
+    <div id="todo-list"></div>
+</body>
+</html>

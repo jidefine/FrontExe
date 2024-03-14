@@ -6,36 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        /* textarea 상위 지역변수로 선언했으므로 접근 가능
-       document.addEventListener('DOMContentLoaded', () => {
-            const textarea = document.querySelector('textarea');
-            const h1 = document.querySelector('h1');
-
-            textarea.addEventListener('keyup', (event)=>{
-                const length = textarea.value.length;
-                h1.textContent = `글자 수 : ${length}`;
-            });
-       })*/
        
-
-        /* textarea가 콜백함수의 지역변수이므로 다른 함수에서 접근이 불가 
-        listener는 addEventListener 함수의 두 번째 매개변수로 전달된 익명 함수
-         const listener = (event) => {
-             // Uncaught ReferenceError: textarea is not defined
-             const length = textarea.value.length;
-             h1.textContent = `글자 수 : ${length}`;
-         }
- 
-         document.addEventListener('DOMContentLoaded', () => {
-             const textarea = document.querySelector('textarea');
-             const h1 = document.querySelector('h1');
- 
-             textarea.addEventListener('keyup', listener);
-         });
-        */
-
-        
-       /* let h1 = null;
+       let h1 = null;
 
         // 다른 영역의 textarea를 접근하는 방법-1
         const listener = (event) => {
@@ -50,7 +22,7 @@
 
             textarea.addEventListener('keyup', listener);
         });
-        */
+        
 
         // let h1 = null;
 

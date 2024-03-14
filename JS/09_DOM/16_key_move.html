@@ -11,6 +11,10 @@
 
             let [x, y] = [0, 0]; // x, y 변수 선언 후 각각 0과 0으로 값을 할당(배열 아님)
             const block = 20;
+
+            // 화살표 함수로 작성된 익명 함수
+            // print라는 이름의 상수에 함수를 할당하며 매개변수를 가지고 있지 않음
+            // 화살표 함수는 자신의 this를 바인딩하지 않음
             const print = () => {
                 star.style.left = `${x*block}px`;
                 star.style.top = `${y*block}px`;

@@ -8,6 +8,8 @@
         document.addEventListener('DOMContentLoaded', ()=>{
             const h1 = document.querySelector('h1');
 
+            // 화살표 함수로 작성된 익명 함수
+            // print라는 이름의 상수에 함수를 할당합니다. 이 함수는 event라는 매개변수를 받아서 사용
             const print = (event) => {
                 let output = '';
                 output += `alt: ${event.altKey}<br>`;

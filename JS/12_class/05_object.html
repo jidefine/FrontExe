@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const createStudent = function(name, kor, eng, math, sci){
+            return {
+                //field(property) - 속성, 멤버 변수
+                name: name,
+                kor: kor,
+                eng: eng,
+                math: math,
+                sci: sci,
+
+                // Method - 메서드, 멤버 함수
+                getSum(){
+                    return this.kor + this.eng + this.math + this.sci;
+                },
+                getAverage(){
+                    return this.getSum()/4;
+                },
+                toString(){ // 객체를 주면 자동으로 문자로 출력됨
+                    return `${this.name}\t${this.getSum()}점\t${this.getAverage()}점\n`
+                }
+            }
+        }
+
+        const students = [];
+        // 구조체 방식: 안에 함수가 못 들어감 ex) C언어
+        students.push(createStudent('가빈', 94, 100, 80, 88));
+        students.push(createStudent('나빈', 88, 97, 70, 78));
+        students.push(createStudent('다빈', 54, 100, 90, 83));
+        students.push(createStudent('라빈', 99, 90, 40, 38));
+
+        let output = '이름\t총점\t평균\n'; // \t : 탭
+        for(const s of students){
+            output += s; // s.toString();
+        }
+        console.log(output);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

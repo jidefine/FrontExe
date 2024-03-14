@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const students = [];
+        // 구조체 방식: 안에 함수가 못 들어감 ex) C언어
+        students.push({name: '가빈', kor:94, math:100, eng: 80, sci: 88});
+        students.push({name: '나빈', kor:88, math:97, eng: 70, sci: 78});
+        students.push({name: '다빈', kor:54, math:100, eng: 90, sci: 83});
+        students.push({name: '라빈', kor:99, math:90, eng: 40, sci: 38});
+
+        let output = '이름\t총점\t평균\n'; // \t : 탭
+        for(const s of students){
+            const sum = s.kor + s.eng + s.math + s.sci;
+            const average = sum / 4;
+            output += `${s.name}\t${sum}점\t${average}점\n`;
+        }
+        console.log(output);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

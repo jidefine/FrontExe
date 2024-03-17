@@ -63,6 +63,13 @@
 .gnb_nav ul li:nth-child(5) {background:url(../images/ico_todo.svg)no-repeat 15px 14px;}
 .gnb_nav ul li a {font-size: 14px; font-weight: 500; color: #333;}
 
+.gnb_nav ul li:nth-child(1):hover {background:url(../images/ico_home_select.svg)no-repeat 15px 14px #414143;}
+.gnb_nav ul li:nth-child(2):hover {background:url(../images/ico_board_select.svg)no-repeat 15px 14px #414143;}
+.gnb_nav ul li:nth-child(3):hover {background:url(../images/ico_map_select.svg)no-repeat 15px 14px #414143;}
+.gnb_nav ul li:nth-child(4):hover {background:url(../images/ico_chat_select.svg)no-repeat 15px 14px #414143;}
+.gnb_nav ul li:nth-child(5):hover {background:url(../images/ico_todo_select.svg)no-repeat 15px 14px #414143;}
+.gnb_nav ul li:hover a{color: #fff;}
+
 .gnb_nav ul li:nth-child(1).select {background:url(../images/ico_home_select.svg)no-repeat 15px 14px #414143;}
 .gnb_nav ul li:nth-child(2).select {background:url(../images/ico_board_select.svg)no-repeat 15px 14px #414143;}
 .gnb_nav ul li:nth-child(3).select {background:url(../images/ico_map_select.svg)no-repeat 15px 14px #414143;}

@@ -1,1 +1,0 @@
-INSERT INTO board (food_type, title, author, location, content) VALUES (?, ?, ?, ?, ?);

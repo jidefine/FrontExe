@@ -5,16 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .container{
+            width: 960px;
+            margin: 0 auto;
+        }
+        .navi{
+            width:960px;
+            height: 60px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ccc;
+        }
+        .navi ul{
+            list-style: none;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
         .navi ul li{
             float: left;
             width: 150px;
             padding: 10px;
         }
         /*
-        : link
-        : visited
-        : hover
-        :
+        [가상 클래스]
+        :link 방문하지 않는 링크 스타일 적용
+        :visited 방문한 링크 스타일 적용
+        :hover 마우스 위에 있을 때 스타일 적용
+        :active 활성화, 즉 클릭했을 때
+        :focus 초점이 맞춰졌을 때
+        :target 특정 ID와 일치할 때 적용되는 스타일을 지정
+        
+        ::before 특정 요소의 내용 앞에 콘텐츠를 추가
+        ::after 특정 요소의 내용 뒤에 콘텐츠를 추가
+
+        순서는 다음과 같이 정의한다
+        순서가 바뀌면 스타일이 제대로 적용되지 않는다
+        :link, :visited, :hover, :active
         */
         .navi a:link, .navi a:visited{
             display: block;
@@ -38,6 +63,7 @@
             border: 1px solid #222;
             border-radius: 5px;
         }
+        /* 해당 id로 링크했을 때 스타일 변경하고 싶을 때*/
         #intro:target{
             background-color: #003df4;
             color: #fff;

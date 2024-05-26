@@ -5,16 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .container{
+            width: 960px;
+            margin: 0 auto;
+        }
+        .navi{
+            width:960px;
+            height: 60px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ccc;
+        }
+        .navi ul{
+            list-style: none;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
         .navi ul li{
             float: left;
             width: 150px;
             padding: 10px;
         }
         /*
-        : link
-        : visited
-        : hover
-        :
+        [가상 클래스]
+        :link 방문하지 않는 링크 스타일 적용
+        :visited 방문한 링크 스타일 적용
+        :hover 마우스 위에 있을 때 스타일 적용
+        :active 활성화, 즉 클릭했을 때
+        :focus 초점이 맞춰졌을 때
+        :target 특정 ID와 일치할 때 적용되는 스타일을 지정
+        
+        ::before 특정 요소의 내용 앞에 콘텐츠를 추가
+        ::after 특정 요소의 내용 뒤에 콘텐츠를 추가
+
+        순서는 다음과 같이 정의한다
+        순서가 바뀌면 스타일이 제대로 적용되지 않는다
+        :link, :visited, :hover, :active
+        */
+
+        /*
+        fieldset
+        - HTML에서 사용되는 태그 중 하나로, 관련된 폼 컨트롤들을 그룹화
+        - 일반적으로 <legend> 태그와 관련 폼 컨트롤이 포함
         */
         .navi a:link, .navi a:visited{
             display: block;
@@ -57,20 +88,28 @@
             padding-bottom: 10px;
         }
         #signup ul li{
-            line-height: 30px;
+            line-height: 30px; /*줄 간격*/
             list-style: none;
             padding: 5px 10px;
-            margin-bottom: ;
+            margin-bottom: 2px;
         }
-        #signup fieldset:first-of-type{
-
+        /*signup의 자손중에 fieldset중에 첫번째 요소, 그리고 다시 그 자손인 label요소*/
+        #signup fieldset:first-of-type label{
+            float: left; /* 오른쪽에 띄움 */
+            font-size: 13px;
+            width: 60px;
         }
-        #signup input:not([type=radio]):hover{
+        #signup input:not([type=radio]){
             border: 1px solid #ccc;
-            border-radius:3px;
+            border-radius: 3px;
             padding: 5px;
-            width:200px;
+            width: 200px;
         }
+        /*radio를 제외한 다른 input에 마우스를 올려놓았을 때*/
+        #signup input:not([type=radio]):hover{
+            border-color: #f00;
+        }
+        /* input에 checked속성이 추가되었을 때 label요소의 스타일*/
         #signup input:checked + label{
             color:#f00;
             font-weight: bold;
@@ -78,6 +117,18 @@
         #signup button{
             border:1px solid #222;
             border-radius: 20px;
+            display: block; /* 블록으로 처리 */
+            font: 16px 맑은고딕, 굴림, 돋움;
+            letter-spacing: 1px; /*글자의 간격 조정*/
+            margin: auto;
+            padding: 7px 25px; /* 위쪽과 아래쪽 패딩 */
+
+            /* padding 적용 순서: top->right->bottom->left(시계방향)*/
+        }
+        #signup b{
+            float: left;
+            font-size: 13px;
+            width:110px;
         }
     </style>
 </head>
@@ -85,6 +136,7 @@
     <div class="container">
         <nav class="navi">
             <ul>
+                <!-- "78_ps_1.html" 페이지에서 ID가 "intro"로 지정된 요소에 대한 링크 -->
                 <li><a href="78_ps_1.html#intro">이용안내</a></li>
                 <li><a href="78_ps_1.html#room">객실소개</a></li>
                 <li><a href="78_ps_1.html#reservation">예약방법 및 요금</a></li>
@@ -92,27 +144,29 @@
             </ul>
         </nav>
         <form id="signup">
-            <legend>개인정보</legend>
-            <ul>
-                <li>
-                    <label for="fullname">이름</label>
-                    <input id="fullname" name="fullname" type="text" required>
-                </li>
-                <li>
-                    <label for="tell">연락처</label>
-                    <input id="tell" name="tell" type="text">
-                </li>
-            </ul>
+            <fieldset>
+                <legend>개인정보</legend>
+                <ul>
+                    <li>
+                        <label for="fullname">이름</label>
+                        <input id="fullname" name="fullname" type="text" required>
+                    </li>
+                    <li>
+                        <label for="tell">연락처</label>
+                        <input id="tell" name="tell" type="text">
+                    </li>
+                </ul>
+            </fieldset>
             <fieldset>
                 <legend>객실형태</legend>
                 <ul>
                     <li>
-                        <label for="basic">기본형(최대 2인)</label>
                         <input  type="radio" name="room" id="basic">
+                        <label for="basic">기본형(최대 2인)</label>
                     </li>
                     <li>
-                        <label for="family">가족형(최대 8인)</label>
                         <input  type="radio" name="room" id="family">
+                        <label for="family">가족형(최대 8인)</label>
                     </li>
                 </ul>
             </fieldset>

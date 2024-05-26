@@ -26,11 +26,16 @@
             padding: 10px;
         }
         /*
+        [가상 클래스]
         :link - 방문하지 않는 링크 스타일 적용
         :visited - 방문한 링크 스타일 적용
         :hover - 마우스 위에 있을 때 스타일 적용
         :active - 활성화, 즉 클릭했을 때
         :focus - 초점이 맞추어졌을 때
+        :target 특정 ID와 일치할 때 적용되는 스타일을 지정
+        
+        ::before 특정 요소의 내용 앞에 콘텐츠를 추가
+        ::after 특정 요소의 내용 뒤에 콘텐츠를 추가
 
         순서는 다음과 같이 정의한다
         순서가 바뀌면 스타일이 제대로 적용되지 않는다
@@ -59,7 +64,7 @@
             border:1px solid #222;
             border-radius:5px;
         }
-        /*부모 안에 있는 모든 요소 중에 3번째 자식 요소*/
+        /*상위요소(부모요소) 안에 있는 모든 요소 중에 3번째 자식 요소*/
         .contents :nth-child(3){
             background-color: #ffff00;
         }
@@ -81,12 +86,53 @@
         </nav>
         <div class="contents">
             <h2>이용 안내</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo in vitae turpis massa sed elementum tempus egestas sed. Mauris in aliquam sem fringilla ut. Dolor sit amet consectetur adipiscing elit ut aliquam purus. Feugiat in fermentum posuere urna nec tincidunt. Fusce id velit ut tortor pretium viverra suspendisse potenti. Id neque aliquam vestibulum morbi. Pretium nibh ipsum consequat nisl vel pretium. Mauris vitae ultricies leo integer malesuada nunc. Molestie at elementum eu facilisis sed. Adipiscing tristique risus nec feugiat in fermentum posuere urna nec. Eros donec ac odio tempor orci dapibus ultrices in iaculis. Rhoncus urna neque viverra justo nec ultrices. At tellus at urna condimentum. Volutpat blandit aliquam etiam erat velit scelerisque in dictum. Ut pharetra sit amet aliquam id diam maecenas. Aliquam id diam maecenas ultricies mi. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Amet justo donec enim diam. Etiam tempor orci eu lobortis elementum nibh tellus. Id diam maecenas ultricies mi eget. Elit pellentesque habitant morbi tristique senectus. Egestas quis ipsum suspendisse ultrices gravida. Cursus eget nunc scelerisque viverra mauris in aliquam sem. Eget gravida cum sociis natoque penatibus et. Nisl suscipit adipiscing bibendum est ultricies integer quis. Faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis. Nullam vehicula ipsum a arcu cursus vitae congue. Tortor at auctor urna nunc id cursus metus aliquam.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo in vitae turpis massa sed elementum tempus egestas sed. Mauris in aliquam sem fringilla ut. Dolor sit amet consectetur adipiscing elit ut aliquam purus. Feugiat in fermentum posuere urna nec tincidunt. Fusce id velit ut tortor pretium viverra suspendisse potenti. Id neque aliquam vestibulum morbi. Pretium nibh ipsum consequat nisl vel pretium. Mauris vitae ultricies leo integer malesuada nunc. Molestie at elementum eu facilisis sed. Adipiscing tristique risus nec feugiat in fermentum posuere urna nec. Eros donec ac odio tempor orci dapibus ultrices in iaculis. Rhoncus urna neque viverra justo nec ultrices. At tellus at urna condimentum. Volutpat blandit aliquam etiam erat velit scelerisque in dictum. Ut pharetra sit amet aliquam id diam maecenas. Aliquam id diam maecenas ultricies mi. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Amet justo donec enim diam. Etiam tempor orci eu lobortis elementum nibh tellus. Id diam maecenas ultricies mi eget. Elit pellentesque habitant morbi tristique senectus. Egestas quis ipsum suspendisse ultrices gravida. Cursus eget nunc scelerisque viverra mauris in aliquam sem. Eget gravida cum sociis natoque penatibus et. Nisl suscipit adipiscing bibendum est ultricies integer quis. Faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis. Nullam vehicula ipsum a arcu cursus vitae congue. Tortor at auctor urna nunc id cursus metus aliquam.</p>
+            <p>I'm like some kind of Supernova
+                Watch out
+                Look at me go
+                재미 좀 볼
+                빛의 Core
+                So hot hot
+                문이 열려
+                서로의 존재를 느껴
+                마치 Discord
+                날 닮은 너 너 누구야
+                (Drop)
+            </p>
+            <p>사건은 다가와 Ah Oh Ay
+                거세게 커져가 Ah Oh Ay
+                That tick that tick tick bomb
+                That tick that tick tick bomb
+                감히 건드리지 못할 걸
+                (누구도 말이야)
+                지금 내 안에선
+                Su su su Supernova
+                Nova
+            </p>
             <h2>객실 소개</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo in vitae turpis massa sed elementum tempus egestas sed. Mauris in aliquam sem fringilla ut. Dolor sit amet consectetur adipiscing elit ut aliquam purus. Feugiat in fermentum posuere urna nec tincidunt. Fusce id velit ut tortor pretium viverra suspendisse potenti. Id neque aliquam vestibulum morbi. Pretium nibh ipsum consequat nisl vel pretium. Mauris vitae ultricies leo integer malesuada nunc. Molestie at elementum eu facilisis sed. Adipiscing tristique risus nec feugiat in fermentum posuere urna nec. Eros donec ac odio tempor orci dapibus ultrices in iaculis. Rhoncus urna neque viverra justo nec ultrices. At tellus at urna condimentum. Volutpat blandit aliquam etiam erat velit scelerisque in dictum. Ut pharetra sit amet aliquam id diam maecenas. Aliquam id diam maecenas ultricies mi. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Amet justo donec enim diam. Etiam tempor orci eu lobortis elementum nibh tellus. Id diam maecenas ultricies mi eget. Elit pellentesque habitant morbi tristique senectus. Egestas quis ipsum suspendisse ultrices gravida. Cursus eget nunc scelerisque viverra mauris in aliquam sem. Eget gravida cum sociis natoque penatibus et. Nisl suscipit adipiscing bibendum est ultricies integer quis. Faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis. Nullam vehicula ipsum a arcu cursus vitae congue. Tortor at auctor urna nunc id cursus metus aliquam.</p>
+            <p>Can't stop hyperstellar
+                원초 그걸 찾아
+                Bring the light of a dying star
+                불러낸 내 우주를 봐 봐
+                Supernova
+                Ah Body bang
+                Make it feel too right
+                휩쓸린 에너지 It's so special
+                잔인한 Queen 이며 Scene 이자 종결
+                이토록 거대한 내 안의 Explosion
+                내 모든 세포 별로부터 만들어져
+                (Under my control Ah)
+            </p>
             <h2>예약 방법 및 요금</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo in vitae turpis massa sed elementum tempus egestas sed. Mauris in aliquam sem fringilla ut. Dolor sit amet consectetur adipiscing elit ut aliquam purus. Feugiat in fermentum posuere urna nec tincidunt. Fusce id velit ut tortor pretium viverra suspendisse potenti. Id neque aliquam vestibulum morbi. Pretium nibh ipsum consequat nisl vel pretium. Mauris vitae ultricies leo integer malesuada nunc. Molestie at elementum eu facilisis sed. Adipiscing tristique risus nec feugiat in fermentum posuere urna nec. Eros donec ac odio tempor orci dapibus ultrices in iaculis. Rhoncus urna neque viverra justo nec ultrices. At tellus at urna condimentum. Volutpat blandit aliquam etiam erat velit scelerisque in dictum. Ut pharetra sit amet aliquam id diam maecenas. Aliquam id diam maecenas ultricies mi. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Amet justo donec enim diam. Etiam tempor orci eu lobortis elementum nibh tellus. Id diam maecenas ultricies mi eget. Elit pellentesque habitant morbi tristique senectus. Egestas quis ipsum suspendisse ultrices gravida. Cursus eget nunc scelerisque viverra mauris in aliquam sem. Eget gravida cum sociis natoque penatibus et. Nisl suscipit adipiscing bibendum est ultricies integer quis. Faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis. Nullam vehicula ipsum a arcu cursus vitae congue. Tortor at auctor urna nunc id cursus metus aliquam.</p>
+            <p>질문은 계속돼 Ah Oh Ay
+                우린 어디서 왔나 Oh Ay
+                느껴 내 안에선
+                Su su su Supernova
+                Nova
+                Can't stop hyperstellar
+                원초 그걸 찾아
+                Bring the light of a dying star
+                불러낸 내 우주를 봐 봐
+                Supernova</p>
         </div>
     </div>
 </body>

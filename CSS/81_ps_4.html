@@ -9,7 +9,7 @@
             text-align: center;
             color: #2b2b2b;
         }
-        table, tb, th{
+        table, td, th{
             border: 1px solid #ccc;
         }
         table{
@@ -17,13 +17,26 @@
             margin:0 auto;
             border-collapse: collapse;
         }
+        td{
+            text-align: left;
+            padding: 10px;
+            padding-left: 20px;
+        }
+        table tr:nth-of-type(2n+1){
+            background: lightgray;
+            color: black;
+        }
     </style>
 </head>
 <body>
     <div id="container">
         <h1>웹개발</h1>
         <table>
-            <tr></tr>
+            <tr><td>HTML</td></tr>
+            <tr><td>CSS</td></tr>
+            <tr><td>Javascript</td></tr>
+            <tr><td>React</td></tr>
+            <tr><td>node.js</td></tr>
         </table>
     </div>
 </body>

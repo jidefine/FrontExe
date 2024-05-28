@@ -78,12 +78,13 @@ body {
 	border: none;
 }
 
+/* 제출 버튼 */
 #signup fieldset:last-of-type{
 	border:none;
 	margin-bottom:0;
 }
 
-/*마우스가 올라가면*/
+/*제출 버튼에 마우스가 올라가면*/
 #signup button:hover{
 	background-color:#222;
 	color:#fff;

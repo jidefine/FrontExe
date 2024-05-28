@@ -1,0 +1,87 @@
+/* layout */
+.flex {display: flex !important;}
+.inline_flex {display: inline-flex !important;}
+.space-_between {display: flex !important;justify-content: space-between!important;}
+.align_items-center {align-items: center!important;}
+.flex_wrap {display: flex !important; flex-wrap: wrap;}
+
+/* width */
+.w20p {width: 20% !important;}
+.w33p {width: 33.333% !important;}
+.w50p {width: 50% !important;}
+.w66p {width: 66.666% !important;}
+.w80p {width: 80% !important;}
+.w100p {width: 100% !important;}
+
+/* font */
+.font_semilight {font-weight: 400;}
+.font_medium {font-weight: 500;}
+.font_semibold {font-weight: 600;}
+.font_bold {font-weight: 700;}
+.title {font-size: 30x; font-weight: 700; color: #111;}
+.sub_title {font-size: 22px; font-weight: 600; margin-bottom: 8px; color: #333;}
+
+/* color */
+.black {color: #111;}
+.green {color:#0a9102;}
+.yellow {color: #fbd107;}
+.orange {color: #ff7602;}
+
+/* padding, margin */
+.pd0 {padding: 0 !important;}
+.mt10 {margin-top: 10px !important;}
+.mb10 {margin-bottom: 10px !important;}
+.mb20 {margin-bottom: 20px !important;}
+
+/* box */
+.box {border: 1px solid #e8e8ee; border-radius: 8px; padding: 30px 20px; margin: 0 10px; height: 100%; box-shadow: 3px 4px 6px rgba(0,0,0,0.1); position: relative;}
+
+
+
+
+
+/* header */
+.header {width: 100%; height:60px; line-height: 60px; border-bottom: 1px solid #e8e8e8;}
+ 
+/* navi */
+
+/* main */
+
+.container {max-width: 1440px; margin: 30px auto;}
+
+.middlebox{
+width: 350px;
+  height: 50%;
+  /*border: 1px solid #333;*/
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.middlebox .logo_back{position: relative; background:#0a9102; width: 100%; height: 200px; border-bottom-left-radius: 13%; border-bottom-right-radius: 13%; top: 0; left: 0; z-index: 0;}
+.middlebox .logo_back .logo_box .logo{height: 50px; width: 45px; margin-left: 73px; margin-right: 20px; background: url(../BITBOX/Client/static/images/logo_new.svg)no-repeat center;}
+.middlebox .logo_back .logo_box{padding: 10px; display: inline-flex; align-items: center; width: 100%; position: relative;}
+.middlebox .logo_box span {margin-right: 73px; font-weight: 700; font-size: 36px; color: #111; display: inline-block;}
+
+.middlebox .login_box{position: absolute; background:#ffffff; width: 80%; height: 280px; top: 25%; left: 50%; transform: translateX(-50%); z-index: 100; text-align: center;  border-radius: 8px; border: 1px solid #e8e8e8; box-shadow: 3px 4px 6px rgba(0,0,0,0.1);}
+.middlebox .login_box h2 {font-size: 18px; font-weight: 600; color: #333; margin-bottom: 10px; }
+.middlebox .login_box #idInput {border-radius: 4px; color: #000000; font-size: 15px; font-weight: 500; text-align: left; display: inline-block; width: 87%; height: 30px; line-height: 30px;}
+.middlebox .login_box #passInput {border-radius: 4px; color: #000000; font-size: 15px; font-weight: 500; text-align: left; display: inline-block; width: 87%; height: 30px; line-height: 30px;}
+.middlebox .login_box #login_btn {background: #0a9102; border-radius: 4px; color: #fff; font-size: 15px; font-weight: 500; text-align: center; display: inline-block; height: 36px; line-height: 36px; width: 90%; }
+.middlebox .login_box #signup_btn {background: #fbd107; border-radius: 4px; color: #fff; font-size: 15px; font-weight: 500; text-align: center; display: inline-block; height: 36px; line-height: 36px; width: 90%; }
+
+
+/* title_box */
+.title_box {margin: 10px 10px 20px;}
+.title_box p {margin-top: 10px;}
+
+/* main_content_box */
+.main_content_box p {font-size: 17px; font-weight: 400; color: #444; margin-bottom: 24px;}
+.main_content_box .box_img {background: #eee; height: 190px;}
+.main_content_box .box_img2 {background: #eee; /*height: 340px;*/}
+
+/* footer */
+.footer {position: fixed; bottom:0;left: 0;width: 100%; z-index: 1001; background:#414143; height: 40px; line-height: 40px;}
+.footer span {font-size: 20px; font-weight: 500; color: #fff; float: right; padding-right: 30px;}

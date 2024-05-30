@@ -14,8 +14,14 @@
             background-repeat: no-repeat;
             background-size: cover;
             border:1px solid #222;
-            transition-property: width, height ;  /* 트랜지션 대상 - 너비, 높이*/
-            transition-duration: 2s 1s; /* 트랜지션 시간 - 2초, 1초*/
+            /* 
+            트랜지션(transition)
+            - CSS에서 상태 변화가 일어날 때 요소의 속성을 부드럽게 변경하도록 하는 기능
+            - transition-property: 속성 선택
+            - transition-duration: 트랜지션이 일어나는 시간을 지정 
+            */
+            transition-property: width, height;  /* 트랜지션 대상 - 너비, 높이*/
+            transition-duration: 2s, 1s; /* 트랜지션 시간 - 2초, 1초*/
         }
         .box:hover{
             width:200px;

@@ -12,11 +12,14 @@
             margin:30px;
             float:left;
         }
+        /* 직접적으로 .origin 클래스의 자식인 <div> 요소들에만 적용 */
         .origin > div{
             width:152px;
             height:180px;
         }
+        /* rotateX는 CSS의 transform 속성에 속하는 함수 */
         .rotatex:hover{ transform:rotateX(50deg);}
+        /* #pers id에 해당하는 요소의 perspective(원근감)를 300픽셀로 설정 */
         #pers{ perspective:300px;}
     </style>
 </head>

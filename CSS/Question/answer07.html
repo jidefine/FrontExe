@@ -5,6 +5,9 @@
 	<title>연습문제 3</title>
   <style>
      table{
+      /* border: 1px solid black;를 지정하지 않아도 
+      기본적으로 테이블의 테두리가 표시됨 */
+
             /*캡션을 아래 위치하도록*/
             caption-side: bottom;
             border-collapse: collapse;
@@ -12,12 +15,18 @@
       .fill{
         background-color: #eee;
       }
+      td, th {
+      border:1px solid black; /*있어도 그만 없어도 그만, 자동 설정임*/
+      padding:10px;
+    }
   </style>
 </head>
 <body>
   <table border="1">
     <caption>2019 국민 독서실태</caption>
     <thead>
+      <!-- <tr class="heading">에 속한 모든 <th> 요소는 
+        해당 클래스의 스타일을 상속하여 배경색이 적용 -->
       <tr class="fill">
         <th>구분</th>
         <th>성인</th>
@@ -26,7 +35,9 @@
     </thead>
     <tbody>
       <tr>
-        <th class="fill">종이책</th>
+          <!-- <tbody> 내부의 <th> 태그는 <tr class="heading">의 <th>와 마찬가지로 
+            .heading 클래스를 상속하여 똑같은 배경색이 적용 -->
+          <th class="fill">종이책</th>
         <td>6.1권</td>
         <td>11.8권</td>
       </tr>

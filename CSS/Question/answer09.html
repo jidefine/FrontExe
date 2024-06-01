@@ -10,8 +10,11 @@
     <div id="description">
       <h1>레드향</h1>
       <p>껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
+      <!-- <em>: 텍스트를 이탤릭체로 표시 -->
       <p>레드향은 <em>한라봉과 귤을 교배</em>한 것으로<br>일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
-      <p>비타민 C와 비타민 P가 풍부해<br> <strong>혈액순환, 감기예방</strong> 등에 좋은 것으로 알려져 있다.</p>
+      <!-- <strong>: <b>보다 굵은체, 텍스트 강조 및 중요성 부여, "strong importance"의 약자 -->
+      <!-- <b>: 단순히 텍스트를 굵게 표시 -->
+        <p>비타민 C와 비타민 P가 풍부해<br> <strong>혈액순환, 감기예방</strong> 등에 좋은 것으로 알려져 있다.</p>
     </div>
     <div id="receipe">
       <h2>레드향 샐러드 레시피</h2>
@@ -31,6 +34,9 @@
         <colgroup>
           <col style="background-color:#eee;">
           <col>
+          <!--2개의 연속된 열에 스타일을 확장(span), 
+            즉 2개의 연속된 열에 동일한 스타일 적용,
+            열을 실제로 추가/제거/병합하지 않음-->
           <col span="2" style="width:150px">
         </colgroup>
         <thead>
@@ -43,6 +49,9 @@
         </thead>
         <tbody>
           <tr>
+            <!--2개의 연속된 행에 스타일을 확장(span), 
+            즉 여러 행을 하나의 큰 행으로 합침,
+            rowspan 속성은 <td>나 <th> 태그에서만 사용-->
             <td rowspan="2">선물용</td>
             <td>3kg</td>
             <td>11~16과</td>
@@ -63,6 +72,12 @@
             <td>5kg</td>
             <td>18~26과</td>
             <td>47,000원</td>
+          </tr>
+          <tr>
+            <!--colspan 속성은 여러 열을 하나의 큰 열로 합침,
+            <td>나 <th> 태그에서만 사용-->
+            <td colspan="3">합계</td>
+            <td>?</td>
           </tr>
         </tbody>        
       </table>      

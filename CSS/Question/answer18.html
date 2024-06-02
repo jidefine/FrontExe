@@ -20,6 +20,7 @@
       float:left;
       border-right:1px solid #929292;
     }
+    /* :link 방문하지 않은 링크에 스타일을 적용 */
     .top-menu li a:link{
       color:black;
       text-decoration:none;
@@ -28,6 +29,11 @@
       width:100px;
       height:35px;
       line-height: 35px;
+      transition: 0.5s ease-in; /* 자연스러운 hover 표현 */
+    }
+    /* :visited 방문한 링크에 스타일을 적용 */
+    .top-menu li a:visited{
+      color: orange;
     }
     .top-menu li:last-child {
       border-right:none;      
@@ -35,12 +41,12 @@
     .top-menu li:not(:last-child) a:hover {
       background-color:#555;
       color:#fff;
-      animation: background 1.5s;
+      /* animation: background 1.5s; */
     }
-    .top-menu Li:last-child a:hover {
+    .top-menu li:last-child a:hover {
       background-color:#b30000;
       color:#fff;
-      animation: background2 1.5s;
+      /* animation: background2 1.5s; */
     }
     @keyframes background{
             from{background-color: #929292;}

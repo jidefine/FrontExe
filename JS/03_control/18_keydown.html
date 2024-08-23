@@ -7,6 +7,10 @@
     <title>Document</title>
     <script>
        document.addEventListener('DOMContentLoaded', () => {
+
+        // keydown: 이벤트 핸들러 함수
+        // e: 이벤트 객체로, 키보드 입력에 대한 세부 정보를 포함
+        // e.keyCode: 눌린 키의 코드 값
             document.addEventListener('keydown', function (e) {
                 console.log('입력 키 코드: ' + e.keyCode);
                 switch (e.keyCode) {

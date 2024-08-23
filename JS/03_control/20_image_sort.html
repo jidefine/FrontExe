@@ -31,7 +31,8 @@
                 let $imageContainer = document.querySelector('.image-container');
                 let len = $imageContainer.children.length;
                 for(let i=0; i<len; i++){
-                    let $img = $imageContainer.children[i];
+                    let $img = $imageContainer.children[i]; // 순차적 배치
+                    // let $img = $imageContainer.children[len-i-1]; // 역순 배치
                     let left = initX + (i*offsetX);
                     $img.style.left = left +'px';
                     $img.style.top = initY +'px';

@@ -15,9 +15,11 @@
         console.log(`${num0} + ${num1}의 결과값은 ${result}`)
 
         // 해당 타입의 자료형으로 변환
+        // typeof은 타입을 문자열로 반환
         console.log(String(3.14), typeof String(3.14));
-        console.log(String(true), typeof String(true));
-
+        console.log(3.14, typeof (3.14));
+        console.log(String(true), typeof String(true)); // 'number'
+        console.log(Boolean(true), typeof true); // 'boolean'
     </script>
 </head>
 <body>

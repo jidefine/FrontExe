@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        // DOMContentLoaded
+        // : 페이지의 DOM이 완전히 로드된 후, 즉 HTML 문서가 완전히 파싱(구현)되고 문서의 구조가 생성된 후에 지정된 콜백 함수를 실행
         document.addEventListener('DOMContentLoaded', () => {
+
             // const button = document.getElementById('btnStart');
             const button = document.querySelector('#btnStart');
+
             button.addEventListener('click', () => {
+
                 // parseInt : int형으로 변환
                 // parseFloat : float형으로 변환
+                
                 const luckyVal = parseInt(Math.random() * 10 + 1);  // 1 ~ 10의 난수
                 console.log(luckyVal);
                 switch (luckyVal) {

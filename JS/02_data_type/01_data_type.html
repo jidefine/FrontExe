@@ -31,10 +31,12 @@
         - 시대의 요구사항을 빠르게 적용하는데에서 중요한 언어인 경우가 많다
         */
 
+        // 자료형: Number, String, Boolean, 배열(Array), 객체, undefined, null
+
+
         // let : 변수 선언의 의미
         let name='으악'
         console.log(name)
-        //console.log(typeof(name));
         console.log(typeof (name));
 
         let num = 100;
@@ -50,11 +52,23 @@
         console.log(typeof (dnum));
 
         let anyval;
-        console.log(anyval);
+        console.log(anyval); // undefined
+        console.log(typeof (anyval)); // undefined
 
-        var now = new Date();
+        var now = new Date(); // 객체
         let hour = now.getHours();
-        console.log(typeof (hour)); // number 타입
+        console.log(hour);
+        console.log(typeof (hour)); // number
+
+        var seasons = ['봄', '여름', '가을', '겨울'];
+        console.log(seasons); // 배열(Array)
+        console.log(seasons[1]); // 여름
+        console.log(seasons.slice(0, 2)); // ['봄', '여름']
+        console.log(typeof (seasons)); // object
+
+        let variable = null; 
+        console.log(variable); // null
+        console.log(typeof (variable)); //  object
     </script>
 </head>
 <body>

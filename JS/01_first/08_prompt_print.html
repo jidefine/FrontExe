@@ -13,9 +13,12 @@
         var now = new Date();
         var date = now.toLocaleDateString();
         var time = now.toLocaleTimeString();
+        let hour = now.getHours();
+        let minute = now.getMinutes();
         document.write("<br>" + now.toString());
         document.write("<br><br>오늘은 <b>" + date + "</b>입니다.");
         document.write("<br>현재 시각은 <b>" + time + "</b>입니다.");
+        document.write("<br>" + hour + "시" + minute + "분");
     </script>
 </head>
 <body>

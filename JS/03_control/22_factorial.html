@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>while문을 사용한 팩토리얼 계산</h1>
+    <script>
+        let n = prompt ("숫자를 입력하세요.");
+        let msg = "";
+
+        // trim()
+        // 1) JavaScript의 문자열 객체 메서드
+        // 2) 문자열의 양 끝에 있는 공백(스페이스, 탭, 줄 바꿈 등)을 제거하는 데 사용
+        if(n.trim() !== ""){
+            let nFact = 1;
+            let i = 1;
+
+            while(i <= n){
+                nFact *= i;
+                i++;
+            }
+            msg = n + "!= " + nFact;
+        } 
+        else {
+            msg = "값을 입력하지 않았습니다."
+        }
+
+        document.write(msg);
+    </script>
+</body>
+</html>

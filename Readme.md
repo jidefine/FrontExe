@@ -1,5 +1,7 @@
 # Front-end
 
-## 1.
+## 1. HTML
 
-## 2.
+## 2. CSS
+
+## 3. JavaScript

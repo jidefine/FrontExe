@@ -240,8 +240,10 @@
   flex-shrink: 0;
   background-color: rgba(255, 255, 255, 1);
 }
+tbody {
+  width: 100%;
+}
 .availability-submit-row {
-  /* width: 1200px; */
   display: flex;
   align-items: flex-start;
   flex-shrink: 0;
@@ -273,12 +275,13 @@
 }
 .availability-submit-data {
   gap: 10px;
-  width: 250px;
   height: 40px;
   display: flex;
   padding: 13px 10px;
   align-items: center;
+  flex: 1;
   flex-shrink: 0;
+  flex-grow: 1;
   border-color: rgba(170, 170, 170, 1);
   border-style: solid;
   border-width: 1px;

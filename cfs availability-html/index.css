@@ -45,6 +45,7 @@
   display: flex;
   position: relative;
   align-items: flex-start;
+  flex: 1;
   flex-shrink: 0;
   flex-direction: column;
 }

@@ -3,7 +3,7 @@
   display: flex;
   overflow: auto;
   min-height: 100vh;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 }
 .availability-submit-container {
@@ -14,7 +14,9 @@
   position: relative;
   align-items: flex-start;
   flex: 1;
+  flex-grow: 1;
   flex-shrink: 0;
+  flex-direction: column;
   background-color: rgba(255, 255, 255, 1);
 }
 .availability-submit-header {
@@ -25,7 +27,7 @@
   height: 75px;
   display: flex;
   padding: 15px 120px;
-  position: absolute;
+  position: relative;
   align-items: flex-start;
   flex-shrink: 0;
   flex-direction: column;
@@ -36,12 +38,12 @@
   height: 48px;
 }
 .availability-submit-content {
-  top: 75px;
+  /* top: 75px; */
   left: 0px;
   width: 100%;
-  /* height: auto; */
+  height: 100vh-75-50;
   display: flex;
-  position: absolute;
+  position: relative;
   align-items: flex-start;
   flex-shrink: 0;
   flex-direction: column;
@@ -364,7 +366,7 @@ tbody {
   height: 50px;
   display: flex;
   padding: 6px 373px;
-  position: absolute;
+  position: relative;
   align-items: center;
   flex-shrink: 0;
   justify-content: center;
